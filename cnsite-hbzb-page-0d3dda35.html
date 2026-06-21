@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>黑白之间 · 故事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f9fd;
+            color: #1d2c3b;
+            line-height: 1.7;
+            padding: 0 1.2rem;
+        }
+
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 2.2rem 0 3.5rem;
+        }
+
+        /* 开场短句  hero区 */
+        .hero {
+            margin-bottom: 2.6rem;
+            padding: 2.4rem 1.8rem;
+            background: linear-gradient(125deg, #e6f3f0 0%, #d4eae8 100%);
+            border-radius: 40px 16px 40px 16px;
+            box-shadow: 0 4px 20px rgba(30, 100, 120, 0.08);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #167a7a;
+            background: rgba(22, 122, 122, 0.1);
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #114b4f;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #1f4a51;
+            max-width: 600px;
+        }
+
+        /* 承接段落 */
+        .story-block {
+            margin: 2.6rem 0;
+            padding: 0 0.4rem;
+        }
+
+        .story-block p {
+            margin-bottom: 1.25rem;
+            font-size: 1.02rem;
+            color: #1f3a44;
+        }
+
+        .story-block .highlight {
+            color: #167a7a;
+            font-weight: 500;
+        }
+
+        /* 网格卡片 —— 特点列表 */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 2.4rem 0 3rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 28px 12px 28px 12px;
+            padding: 1.6rem 1.5rem;
+            box-shadow: 0 6px 14px rgba(0, 40, 50, 0.04);
+            border: 1px solid rgba(30, 130, 130, 0.12);
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #249b9b;
+            box-shadow: 0 12px 24px rgba(16, 110, 110, 0.08);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+            display: inline-block;
+            color: #1d7e7e;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #104a4f;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.98rem;
+            color: #2c4b54;
+            line-height: 1.65;
+        }
+
+        /* 温和结尾 */
+        .gentle-closing {
+            margin: 2.5rem 0 1.8rem;
+            padding: 2.2rem 1.8rem;
+            background: #eaf3f1;
+            border-radius: 30px 16px 30px 16px;
+            border-left: 5px solid #279e9e;
+        }
+
+        .gentle-closing p {
+            font-size: 1.05rem;
+            color: #14444a;
+        }
+
+        .gentle-closing a {
+            color: #167a7a;
+            text-decoration: none;
+            border-bottom: 1px dotted #3ca3a3;
+            font-weight: 500;
+        }
+
+        .gentle-closing a:hover {
+            color: #0b5858;
+            border-bottom-color: #0b5858;
+        }
+
+        /* FAQ摘要（极简） */
+        .faq-mini {
+            margin: 2.8rem 0 1.2rem;
+        }
+
+        .faq-mini details {
+            background: #ffffff;
+            border-radius: 20px 10px 20px 10px;
+            padding: 0.8rem 1.4rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d4e4e4;
+        }
+
+        .faq-mini summary {
+            font-weight: 550;
+            color: #125b5b;
+            cursor: pointer;
+            font-size: 1.02rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini summary::marker {
+            color: #249b9b;
+        }
+
+        .faq-mini details p {
+            margin-top: 0.6rem;
+            color: #1d3d47;
+            font-size: 0.96rem;
+            padding-left: 0.3rem;
+        }
+
+        /* 小字 & footer */
+        .fine-print {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #60858b;
+            text-align: center;
+            border-top: 1px solid #d3e3e3;
+            padding-top: 1.6rem;
+        }
+
+        /* 响应式 */
+        @media (min-width: 600px) {
+            body {
+                padding: 0 2rem;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.6rem;
+            }
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            .hero {
+                padding: 3rem 2.5rem;
+            }
+            .gentle-closing {
+                padding: 2.5rem 2.5rem;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .page {
+                padding: 3.2rem 0 4rem;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <section class="hero">
+        <span class="hero-tag">✦ 故事的开端</span>
+        <h1>当画面褪去颜色，故事反而更清晰。</h1>
+        <p>一种观看方式，让运动回归节奏与力量。没有纷杂的色调，只有明暗之间的呼吸。</p>
+    </section>
+
+    <!-- 承接段落：从关键词背后的主题展开 -->
+    <div class="story-block">
+        <p>
+            很多年前，人们围坐在小小的荧幕前，看着黑白影像里奔跑的身影。那时没有高清，没有慢动作回放，只有纯粹的反应和判断。如今技术轮转，但那种专注与期待并未消失——它换了一种面貌，藏进了一个叫<span class="highlight">黑白直播</span>的角落。
+        </p>
+        <p>
+            所谓「黑」与「白」，并非单调，而是剔除干扰后的坦诚。看一场比赛，不再被闪烁的弹幕和刺眼的配色拉扯注意力；你只需注视球场上的移动、球员的表情、瞬间的爆发。这或许是体育观赏最古老的仪式，也是数字时代里难得的宁静。
+        </p>
+    </div>
+
+    <!-- 特点列表 (网格卡片) -->
+    <div class="grid-cards">
+        <div class="card">
+            <div class="card-icon">◐</div>
+            <h3>观感素净</h3>
+            <p>界面克制，高对比度文字与柔和底色，长时间观看也不易疲劳。一切只为内容让路。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">◑</div>
+            <h3>信号稳定</h3>
+            <p>从源头优化传输路径，减少卡顿与延迟。画面也许没有过多修饰，但流畅是第一准则。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">◒</div>
+            <h3>赛程覆盖</h3>
+            <p>覆盖主流足球、篮球及小众赛事，不论深夜还是清晨，总有值得守候的对决。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">◓</div>
+            <h3>低干扰</h3>
+            <p>没有繁复的弹窗和过度推荐，把屏幕还给比赛本身。安静陪伴，不打扰。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 —— 自然嵌入链接 -->
+    <div class="gentle-closing">
+        <p>
+            如果你也曾在某个深夜，想找一处不喧哗的地方看一场纯粹的球赛，不妨试试 <a href="https://cnsite--hbzb.com">黑白直播</a>。它不会承诺奇迹，只是安静地呈现比赛该有的样子。在明暗交界处，或许你能找回最初看球时的那份专注。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要（极简） -->
+    <div class="faq-mini">
+        <details>
+            <summary>使用前需要注册吗？</summary>
+            <p>不需要。打开页面即可浏览当前直播列表，无需留下任何个人信息。部分功能可能依赖浏览器本地设置。</p>
+        </details>
+        <details>
+            <summary>黑白直播适合哪些运动？</summary>
+            <p>以足球、篮球为主，也包含网球、排球、电竞等赛事。赛程列表会随赛季动态更新。</p>
+        </details>
+        <details>
+            <summary>移动端体验如何？</summary>
+            <p>页面采用响应式布局，在手机和平板上均可自适应。卡片、文字均经过触控优化，横竖屏皆可流畅使用。</p>
+        </details>
+    </div>
+
+    <!-- footer -->
+    <div class="fine-print">
+        <span>一些画面，褪色后才显露出轮廓</span>
+    </div>
+</div>
+</body>
+</html>
