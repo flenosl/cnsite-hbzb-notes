@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞彩网 · 足球与篮球的叙事指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', 'Source Han Serif SC', serif;
+            background-color: #f7f3eb;
+            color: #3a322a;
+            line-height: 1.75;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fffcf7;
+            border-radius: 24px;
+            padding: 2.5rem 2rem 3rem;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        /* hero 区 —— 杂志题图 */
+        .hero {
+            margin: -2.5rem -2rem 2.5rem;
+            padding: 4rem 2rem 3rem;
+            background: linear-gradient(145deg, #e3dacf, #f0e8dc);
+            border-radius: 24px 24px 48px 48px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "⚽🏀";
+            font-size: 2.4rem;
+            letter-spacing: 0.6rem;
+            display: block;
+            margin-top: 0.5rem;
+            opacity: 0.5;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #2b241e;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero p.tagline {
+            font-size: 1rem;
+            font-style: italic;
+            color: #675b4e;
+            border-top: 1px solid #bfb3a3;
+            display: inline-block;
+            padding-top: 0.6rem;
+        }
+
+        /* 正文排版 */
+        section {
+            margin-bottom: 2.4rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            border-left: 4px solid #c0a68b;
+            padding-left: 0.8rem;
+            margin-bottom: 0.9rem;
+            color: #3d322a;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* 引用 / 提示框 */
+        .callout {
+            background: #efe9df;
+            padding: 1.4rem 1.6rem;
+            border-radius: 16px;
+            margin: 1.8rem 0;
+            font-size: 0.95rem;
+            border-left: 5px solid #b7a088;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .callout strong {
+            color: #4f3f31;
+        }
+
+        .inset-quote {
+            font-style: italic;
+            color: #5f5243;
+            background: #faf6ef;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            margin: 1.2rem 0;
+        }
+
+        /* 特色列表 —— 不喧宾夺主 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            flex: 1 1 160px;
+            background: #f5efe7;
+            padding: 0.8rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .feature-item .emoji-badge {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 页尾 */
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd3c8;
+            font-size: 0.9rem;
+            color: #6f6255;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #6f4e2e;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7a088;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 2px solid #6f4e2e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 560px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem 2.2rem;
+            }
+            .hero {
+                margin: -1.8rem -1.2rem 2rem;
+                padding: 2.8rem 1.2rem 2rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 杂志横幅 hero -->
+    <header class="hero">
+        <h1>比赛日·叙事</h1>
+        <p class="tagline">从一方屏幕到万千球场</p>
+    </header>
+
+    <!-- 背景说明 —— 竞彩世界里的日常观察 -->
+    <section>
+        <h2>不只是比分</h2>
+        <p>每一场足球或篮球比赛，都像一出没有剧本的剧场。人们围坐在一起，讨论战术、猜测走势、分享各自的判断——这种交流早已成为很多人周末生活的一部分。在中文互联网的讨论里，常常会出现一个叫「竞彩」的关键词，它既代表一种赛事兴趣的延伸，也像是一座桥，连接着屏幕前的分析与真实赛场上的瞬息万变。</p>
+        <div class="inset-quote">
+            “朋友发来一条消息：‘今晚这场你看好谁？’ 对话框里很快多出几轮分析，比分、状态、往绩……一来一回，比比赛本身还有意思。”
+        </div>
+        <p>如果你也偶尔关心联赛动态，或者单纯喜欢在赛前做一点小小的推演，那么类似 <a href="https://home-zh-sporttery.com">竞彩网</a> 这样的平台或许能提供更结构化的信息。它像一本随时更新的赛事手册，把数据、对阵、背景整理在一起，方便你在聊天时多一份谈资。</p>
+    </section>
+
+    <!-- 三段自然介绍（1/3） -->
+    <section>
+        <h2>观察的乐趣</h2>
+        <p>人们喜欢预测，并不是为了所谓的「结果崇拜」，而是享受那种基于有限信息作出判断的智力游戏。篮球里的让分、足球里的总进球数、半场走势……每一个维度都像一枚棱镜，折射出比赛的不同切面。这种观察方式，也让原本平淡的常规赛多了一层沉浸感。</p>
+        <div class="callout">
+            <strong>一个小场景：</strong> 周四晚上，几个朋友在群里聊英超，有人贴出一张积分榜，有人找出最近五场交锋记录。聊到兴头上，有人随口说：「我猜这场至少三个球。」—— 这种「随口一说」的背后，往往藏着许多看不见的浏览与对比。
+        </div>
+        <p>数字本身是中性的，但围绕数字展开的讨论却充满了人情味。从数据到直觉，从球队新闻到场地天气，每个细节都可能成为判断的支点。</p>
+    </section>
+
+    <!-- 三段自然介绍（2/3）—— 特点与场景 -->
+    <section>
+        <h2>适合谁翻看</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <span class="emoji-badge">📋</span>
+                赛前做功课的球迷
+            </div>
+            <div class="feature-item">
+                <span class="emoji-badge">🧠</span>
+                喜欢推演的朋友
+            </div>
+            <div class="feature-item">
+                <span class="emoji-badge">📊</span>
+                数据爱好者
+            </div>
+        </div>
+        <p>不是每个人都需要成为专家。很多人只是希望在周末看球前，心里有个大概的轮廓——哪些队伍状态正热，哪些球星可能轮休。这类信息不需要花哨的包装，清晰、及时就够了。而一个整合了赛事日历与历史数据的站点，正好能充当这个「预习工具」。</p>
+        <p>另外，如果你喜欢在社交平台上写点赛前分析或赛后复盘，那么一份可靠的信息源也能让你的内容更扎实。毕竟，言之有物永远比空泛的感概更吸引人。</p>
+    </section>
+
+    <!-- 三段自然介绍（3/3）—— 提示与 FAQ 摘要风格 -->
+    <section>
+        <h2>几个常见疑问</h2>
+        <div style="margin-bottom: 0.8rem;">
+            <p style="margin-bottom: 0.3rem;"><strong>Q：我需要注册才能浏览吗？</strong></p>
+            <p style="margin-bottom: 1rem;">大部分赛事信息和数据是公开可查阅的，像翻阅一本杂志一样，打开就能看到当天的主要对阵与背景资料。</p>
+            <p style="margin-bottom: 0.3rem;"><strong>Q：信息更新及时吗？</strong></p>
+            <p style="margin-bottom: 1rem;">主流联赛的赛程、比分、变化通常会保持同步，尤其在比赛日，变动会比较频繁。建议赛前半小时再确认一下最新情况。</p>
+            <p style="margin-bottom: 0.3rem;"><strong>Q：手机上看方便吗？</strong></p>
+            <p>页面会自适应屏幕，在手机上阅读、划动、查看列表都很顺畅。毕竟很多人都是在通勤路上、午休间隙随手翻翻。</p>
+        </div>
+    </section>
+
+    <!-- 页尾访问提示 -->
+    <footer class="footer-note">
+        <p>如果你想自己翻翻最新的赛事信息，可以直接去 <a href="https://home-zh-sporttery.com">竞彩网</a> 看看。那里有完整的比赛列表、历史数据和一些有意思的统计视角。周末快到了，挑一场感兴趣的比赛，约上朋友边看边聊，本身就是一件很放松的事。</p>
+        <p style="margin-top: 0.8rem; font-size: 0.8rem; color: #9b8d7d;">—— 以平常心对待每一场比赛 ——</p>
+    </footer>
+
+</div>
+</body>
+</html>
